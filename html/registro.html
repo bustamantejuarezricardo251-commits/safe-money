@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Safe Money</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header>
+    <h2>Registro</h2>
+  </header>
+
+  <main>
+    <form action="../php/registro_usuario.php" method="POST" class="formulario">
+      <input type="text" name="nombre" placeholder="Nombre de usuario" required>
+      <input type="number" name="edad" placeholder="Edad" required>
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+      <input type="password" name="contrasena" placeholder="Contraseña" required>
+      <button type="submit">Registrarse</button>
+    </form>
+    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+  </main>
+
+  <nav class="barra-inferior">
+  <a href="dashboard.html">🏠</a>
+  <a href="resumen.html">📊</a>
+  <a href="graficas.html">📈</a>
+  <a href="metas.html">🎯</a>
+  <a href="ajustes.html">⚙️</a>
+</nav>
+</body>
+</html>

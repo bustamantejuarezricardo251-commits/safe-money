@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráficas detalladas - Safe Money</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header-principal">
+    <h2>Gráficas detalladas</h2>
+  </header>
+
+  <main class="contenedor-dashboard">
+    <section class="grafico-categorias">
+      <h3>Distribución de gastos por categoría</h3>
+      <div class="grafico-wrapper">
+        <canvas id="graficoCategorias"></canvas>
+      </div>
+    </section>
+
+    <section class="botones-informe">
+      <a href="../php/generar_reporte.php" class="boton verde">📄 Informe detallado</a>
+      <a href="historial.html" class="boton gris">📋 Consultar historial</a>
+    </section>
+  </main>
+
+  <nav class="barra-inferior">
+    <a href="dashboard.html">🏠</a>
+    <a href="resumen.html">📊</a>
+    <a href="graficas.html">📈</a>
+    <a href="metas.html">🎯</a>
+    <a href="ajustes.html">⚙️</a>
+  </nav>
+
+  <script src="../js/graficas.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metas de ahorro - Safe Money</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="header-principal">
+    <h2>Metas de ahorro</h2>
+  </header>
+
+  <main class="contenedor-dashboard">
+    <section class="formulario-meta">
+<form id="formMeta">
+  <fieldset>
+    <legend>Definir nueva meta</legend>
+
+    <label for="nombre_meta">Nombre de la meta:</label>
+    <input type="text" id="nombre_meta" name="nombre_meta" required>
+
+    <label for="descripcion_meta">Descripción:</label>
+    <textarea id="descripcion_meta" name="descripcion_meta" required></textarea>
+
+    <label for="categoria">Categoría:</label>
+    <select id="categoria" name="categoria" required>
+      <option value="viaje">Viaje</option>
+      <option value="boda">Boda</option>
+      <option value="vacaciones">Vacaciones</option>
+      <option value="emergencia">Emergencia</option>
+      <option value="educación">Educación</option>
+      <option value="otros">Otros</option>
+    </select>
+
+    <label for="cantidad">Monto objetivo:</label>
+    <input type="number" step="0.01" id="cantidad" name="cantidad" required>
+
+    <label for="fecha_inicio">Fecha de inicio:</label>
+    <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+
+    <label for="fecha_fin">Fecha límite:</label>
+    <input type="date" id="fecha_fin" name="fecha_fin" required>
+
+    <button type="submit">Guardar meta</button>
+  </fieldset>
+</form>
+
+  </section>
+
+<section id="listaMetas" class="contenedor-metas">
+  <!-- Aquí se insertan las metas dinámicamente -->
+</section>
+
+  </main>
+
+  <nav class="barra-inferior">
+    <a href="dashboard.html">🏠</a>
+    <a href="resumen.html">📊</a>
+    <a href="graficas.html">📈</a>
+    <a href="metas.html">🎯</a>
+    <a href="ajustes.html">⚙️</a>
+  </nav>
+
+  <script src="../js/metas.js"></script>
+</body>
+</html>

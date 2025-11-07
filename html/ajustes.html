@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajustes - Safe Money</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="header-principal">
+    <h2>Ajustes de la aplicación</h2>
+  </header>
+
+  <main class="contenedor-dashboard">
+    <ul class="lista-ajustes">
+      <li><strong>Información personal:</strong> <a href="perfil.html">Editar nombre, correo</a></li>
+      <li><strong>Cuentas:</strong> <a href="cambiar_contrasena.html">Cambiar contraseña</a></li>
+      <li><strong>Idioma:</strong> <button onclick="cambiarIdioma()">Español / Inglés</button></li>
+      <li><strong>Color de tema:</strong> <button onclick="cambiarTema()">Claro / Oscuro</button></li>
+      <li><strong>Acerca de:</strong> <a href="acerca.html">Versión, desarrollador</a></li>
+      <li><strong>Sesión:</strong> <button onclick="cerrarSesion()" class="boton-rojo">Cerrar sesión</button></li>
+    </ul>
+  </main>
+
+  <nav class="barra-inferior">
+    <a href="dashboard.html">🏠</a>
+    <a href="resumen.html">📊</a>
+    <a href="graficas.html">📈</a>
+    <a href="metas.html">🎯</a>
+    <a href="ajustes.html">⚙️</a>
+  </nav>
+
+  <script>
+    function cerrarSesion() {
+      fetch("../php/logout.php")
+        .then(() => window.location.href = "login.html");
+    }
+
+    function cambiarIdioma() {
+      alert("Función de idioma aún no implementada.");
+    }
+
+    function cambiarTema() {
+      document.body.classList.toggle("modo-oscuro");
+    }
+  </script>
+</body>
+</html>

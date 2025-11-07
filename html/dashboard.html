@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de control - Safe Money</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="header-principal">
+    <h1>Bienvenido, <span id="nombreUsuario">Usuario</span></h1>
+    <a href="alertas.html" class="boton-alerta" title="Ver alertas">🔔</a>
+  </header>
+
+  <main class="contenedor-dashboard">
+    <section class="tarjetas-acciones">
+      <a href="ingreso.html" class="tarjeta-boton ingreso">💰 Registrar ingreso</a>
+      <a href="gasto.html" class="tarjeta-boton gasto">🛒 Registrar gasto</a>
+    </section>
+  </main>
+
+  <nav class="barra-inferior">
+    <a href="dashboard.html">🏠</a>
+    <a href="resumen.html">📊</a>
+    <a href="graficas.html">📈</a>
+    <a href="metas.html">🎯</a>
+    <a href="ajustes.html">⚙️</a>
+  </nav>
+
+  <script>
+    fetch("../php/usuario_actual.php")
+      .then(res => res.json())
+      .then(data => {
+        if (data.nombre) {
+          document.getElementById("nombreUsuario").textContent = data.nombre;
+        }
+      });
+  </script>
+</body>
+</html>

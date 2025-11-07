@@ -1,0 +1,494 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Contenido principal */
+main {
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Formulario */
+.formulario {
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Campos de entrada */
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Botón de registro */
+.formulario button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Enlace de inicio de sesión */
+main p {
+  margin-top: 1em;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+main a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* Barra inferior de navegación */
+.barra-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5em 0;
+  z-index: 100;
+}
+
+.barra-inferior a {
+  font-size: 1.5em;
+  color: #4CAF50;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.barra-inferior a:hover {
+  transform: scale(1.2);
+}
+
+.boton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1em 2em;
+  margin: 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+  .boton {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.header-principal {
+  position: relative;
+  padding: 1em;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+.menu-principal ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.menu-principal a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contenedor-dashboard {
+  padding: 1em;
+}
+
+.tarjeta-resumen {
+  background-color: #e0f7fa;
+  border-radius: 8px;
+  padding: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.tabla-movimientos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.tabla-movimientos th, .tabla-movimientos td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.pie-pagina {
+  background-color: #2E8B57;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+@media (max-width: 600px) {
+  .menu-principal ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-resumen, .tabla-movimientos {
+    font-size: 0.9em;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.contenedor-formulario {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.formulario-ingreso form {
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+}
+
+form legend {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: #2E8B57;
+}
+
+form label {
+  display: block;
+  margin-top: 1em;
+  font-weight: 500;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 1.5em;
+  padding: 0.7em;
+  background-color: #2E8B57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #256d47;
+}
+
+.barra-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2E8B57;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5em 0;
+  z-index: 1000;
+}
+
+.barra-inferior a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.grafico-wrapper {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.botones-informe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.boton.verde {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.boton.gris {
+  background-color: #607D8B;
+  color: white;
+}
+
+.boton {
+  padding: 0.8em 1.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+
+.boton:hover {
+  opacity: 0.9;
+}
+
+.tarjetas-acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.tarjeta-boton {
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tarjeta-boton.ingreso {
+  background-color: #4CAF50;
+}
+
+.tarjeta-boton.gasto {
+  background-color: #F44336;
+}
+
+.tarjeta-boton:hover {
+  opacity: 0.9;
+}
+
+.tarjeta-meta {
+  background-color: #f0f8f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 350px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.tarjeta-meta h3 {
+  margin-top: 0;
+}
+
+.tarjeta-meta form {
+  margin-top: 1em;
+  display: flex;
+  gap: 0.5em;
+}
+
+.tarjeta-meta input {
+  flex: 1;
+  padding: 0.5em;
+}
+
+.tarjeta-meta button {
+  padding: 0.5em 1em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.tarjetas-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em;
+}
+
+.tarjeta-boton {
+  display: block;
+  width: 100%;
+  padding: 2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tarjeta-boton.ingreso {
+  background-color: #4CAF50;
+}
+
+.tarjeta-boton.gasto {
+  background-color: #F44336;
+}
+
+.tarjeta-boton:hover {
+  opacity: 0.9;
+}
+
+.lista-ajustes {
+  list-style: none;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.lista-ajustes li {
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-ajustes a,
+.lista-ajustes button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.boton-rojo {
+  background-color: #F44336 !important;
+}
+
+.modo-oscuro {
+  background-color: #222;
+  color: #eee;
+}
+
+.tarjeta-alerta {
+  background-color: #fff8e1;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 350px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.boton-alerta {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 1.5em;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.contenedor-metas {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.tarjeta-meta {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.5em 0;
+}
+
+.barra-progreso .relleno {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.5s ease;
+}

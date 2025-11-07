@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar gasto - Safe Money</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="header-principal">
+    <h2>Registrar gasto de dinero</h2>
+  </header>
+
+  <main class="contenedor-formulario">
+    <section class="formulario-gasto">
+      <form action="../php/guardar_gasto.php" method="POST">
+        <fieldset>
+          <legend>Detalles del gasto</legend>
+
+          <label for="monto">Monto gastado:</label>
+          <input type="number" step="0.01" name="monto" id="monto" required>
+
+          <label for="categoria">Categoría:</label>
+          <select name="categoria" id="categoria" required>
+            <option value="pasajes">Pasajes</option>
+            <option value="comida">Comida</option>
+            <option value="recibos">Recibos</option>
+            <option value="regalos">Regalos</option>
+            <option value="entretenimiento">Entretenimiento</option>
+            <option value="otros">Otros</option>
+          </select>
+
+          <button type="submit">Guardar gasto</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <nav class="barra-inferior">
+  <a href="dashboard.html">🏠</a>
+  <a href="resumen.html">📊</a>
+  <a href="graficas.html">📈</a>
+  <a href="metas.html">🎯</a>
+  <a href="ajustes.html">⚙️</a>
+</nav>
+</body>
+</html>
